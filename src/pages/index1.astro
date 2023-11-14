@@ -1,0 +1,110 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import FeatureAlt from "@components/feature-alt.astro";
+import FeatureGrid from "@components/feature-grid.astro";
+import Features from "@components/features.astro";
+import Footer from "@components/footer.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import Testimonials from "@components/testimonials.astro";
+import Layout from "@layouts/Layout.astro";
+import Badge from "@components/ui/badge.astro";
+import { Picture } from "astro:assets";
+import FeatureImg1 from "../assets/features/6.png";
+import FeatureImg2 from "../assets/features/2.png";
+import { Icon } from "astro-icon";
+import Link from "@components/ui/link.astro";
+
+const { nomargin } = Astro.props;
+import { Image, Picture } from "astro:assets";
+import heroImage from "../assets/hero-screenshot.png";
+import Link from "@components/ui/link.astro";
+import Container from "@components/container.astro";
+---
+---
+<Layout footerMargin={false}>
+  
+<div class="overflow-x-clip">
+  <Container>
+    <main class="grid lg:grid-cols-5 place-items-center relative">
+      <div class="max-w-sm md:max-w-max lg:col-span-2">
+        <h1
+          class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
+          Commercial Flooring Solutions by JMB Floors
+        </h1>
+        <p
+          class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
+          JMB Floors, a pioneer in commercial flooring solutions, offers a diverse range of high-quality flooring services tailored to meet the unique needs of businesses across London. With a commitment to excellence and customer satisfaction, we have established ourselves as a trusted name in the industry.
+        </p>
+        <div
+          class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+          <Link
+            href="https://jmbfloors.com/services"
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener">
+            Our Services
+          </Link>
+          <Link
+            size="lg"
+            style="outline"
+            rel="noopener"
+            href="https://jmbfloors.com/contact"
+            class="flex gap-1 items-center justify-center"
+            target="_blank">
+            Contact Us
+          </Link>
+        </div>
+      </div>
+      <div class="py-3 lg:col-span-3 lg:-mr-44">
+        <Picture
+          src={heroImage}
+          alt="JMB Floors"
+          formats={["avif", "webp"]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          widths={[240, 540, 720, heroImage.width]}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    </main>
+  </Container>
+</div>
+  
+<Container>
+  <div class="mt-24">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+      Client <span class="text-indigo-600">Testimonials</span>
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 text-center">
+      JMB Floors is trusted by leading companies and brands across London.
+    </p>
+  </div>
+</Container>
+
+<Container>
+  <div class="mt-24">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      Everything you need for your <span class="text-indigo-600">commercial flooring needs</span>
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      JMB Floors comes with a diverse range of high-quality flooring services. We take the best parts of state-of-the-art tools and add our own innovations.
+    </p>
+  </div>
+</Container>
+
+<Container>
+  <div class="bg-gradient-to-bl from-indigo-900 to-indigo-700 p-8 md:px-20 md:py-20 mt-20 flex flex-col items-center text-center">
+  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+    Build better spaces with JMB Floors.
+  </h2>
+  <p class="text-white/70 mt-4 text-lg md:text-xl">
+    Delivering high-quality commercial flooring solutions tailored to your unique needs.
+  </p>
+  <div class="flex mt-5">
+    <Link href="#" style="inverted">Contact us for a quote</Link>
+  </div>
+</div>
+
+</Layout>
