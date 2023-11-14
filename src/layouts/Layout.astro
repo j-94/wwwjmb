@@ -4,6 +4,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 
+// Make sure to install the font package before importing
 import "@fontsource-variable/inter/index.css";
 
 export interface Props {
@@ -13,16 +14,11 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site,
-).toString();
-
 const { title, footerMargin = true } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "JMBFloors"
-  : "JMBFloors - SAAS Startup Website Template for Astro";
+  ? `${title} | JMB Floors`
+  : "JMB Floors - Flooring Solutions for Every Space";
 ---
 
 <!doctype html>
@@ -34,32 +30,19 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
 
     <SEO
-      title={makeTitle}
-      description="JMBFloors - SAAS & Startup Website Template for Astro built with TailwindCSS."
-      canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `JMBFloors - SAAS &Startup Website Template for Astro`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
-        },
-      }}
-    />
+  title={makeTitle}
+  description="JMB Floors provides professional flooring solutions across the UK, ensuring quality and customer satisfaction."
+  canonical={canonicalURL}
+  twitter={{
+    creator: "@jmbfloors",
+    site: "@jmbfloors",
+    card: "summary_large_image",
+  }}
+/>
+
+  
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-      img {
-        content-visibility: auto;
-      }
+      /* Global styles */
     </style>
     <ViewTransitions />
   </head>

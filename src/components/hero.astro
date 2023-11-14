@@ -1,59 +1,50 @@
 ---
-import { Image, Picture } from "astro:assets";
+import { Picture } from "astro:assets";
 import heroImage from "../assets/hero-screenshot.png";
 import Link from "@components/ui/link.astro";
 import Container from "@components/container.astro";
+import Contactform from "@components/contactform.astro"; // Ensure the contact form component is correctly imported
 ---
 
 <div class="overflow-x-clip">
   <Container>
-    <main class="grid lg:grid-cols-5 place-items-center relative">
-      <div
-        class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0">
-      </div>
-      <div
-        class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10">
-      </div>
+    <main class="grid lg:grid-cols-12 place-items-center relative gap-y-8 lg:gap-y-0">
+      
+      <!-- Gradient Background Blobs -->
+      <div class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-indigo-200 right-0 top-0"></div>
+      <div class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-purple-200 right-56 top-10"></div>
 
-      <div class="max-w-sm md:max-w-max lg:col-span-2">
-        <h1
-          class="text-3xl lg:text-4xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter [text-wrap:balance] text-center lg:text-start">
-          JMB Floors: Your Flooring Solution
+      <!-- Hero Text and CTA Buttons -->
+      <div class="z-10 col-span-full lg:col-span-5 xl:col-span-4">
+        <h1 class="text-4xl font-bold tracking-tight text-center lg:text-left">
+          Reliable Flooring Across Every Corner of London
         </h1>
-        <p
-          class="text-lg mt-4 max-w-lg text-slate-600 [text-wrap:balance] text-center lg:text-start">
-          London's trusted commercial flooring provider. Excellence in service and customer satisfaction.
+        <p class="mt-4 text-slate-600 text-center lg:text-left">
+          Discover unparalleled flooring services with JMB Floors. Dedication, quality, and customer satisfaction are our promises to you.
         </p>
-        <div
-          class="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
-          <Link
-            href="https://jmbfloors.com/services"
-            target="_blank"
-            class="flex gap-1 items-center justify-center"
-            rel="noopener">
-            Our Services
-          </Link>
-          <Link
-            size="lg"
-            style="outline"
-            rel="noopener"
-            href="https://jmbfloors.com/contact"
-            class="flex gap-1 items-center justify-center"
-            target="_blank">
-            Get in Touch
-          </Link>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center lg:justify-start gap-3">
+          <Link href="/services" class="btn btn-primary">Our Services</Link>
+          <Link href="/contact" class="btn btn-outline">Contact Us</Link>
         </div>
       </div>
-      <div class="py-3 lg:col-span-3 lg:-mr-44">
+
+      <!-- Hero Image -->
+      <div class="col-span-full lg:col-span-5 xl:col-span-4 py-3 lg:py-0 lg:-mr-44">
         <Picture
           src={heroImage}
-          alt="JMB Floors"
+          alt="JMB Floors Hero"
           formats={["avif", "webp"]}
           sizes="(max-width: 1024px) 100vw, 50vw"
-          widths={[240, 540, 720, heroImage.width]}
+          widths={[240, 540, 720, 960]}
           loading="eager"
           fetchpriority="high"
+          class="rounded-xl shadow-lg"
         />
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-span-full lg:col-span-2 xl:col-span-4 z-10 bg-white p-6 rounded-xl shadow-lg">
+        <Contactform />
       </div>
     </main>
   </Container>

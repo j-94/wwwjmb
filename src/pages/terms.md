@@ -19,7 +19,7 @@ By using our platform, you agree to be bound by these terms. If you do not agree
 
 ## 2. Service Usage
 
-2.1. JMBFloorsvides a web-based SaaS platform for [describe the core service(s) provided by Astroship].
+2.1. Astroship provides a web-based SaaS platform for [describe the core service(s) provided by Astroship].
 
 2.2. You understand that your use of Astroship may be subject to limitations, such as storage space, number of users, or other usage constraints.
 

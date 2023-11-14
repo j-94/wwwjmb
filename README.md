@@ -1,14 +1,14 @@
-# JMBFloors
+# Astroship Pro
 
-JMBFloors is a Pro version of Popular Free Astroship Starter Template which was made for startups, marketing websites, landing pages & blog. Built with Astro & TailwindCSS.
+Astroship Pro is a Pro version of Popular Free Astroship Starter Template which was made for startups, marketing websites, landing pages & blog. Built with Astro & TailwindCSS.
 
 This Pro Template is made by [Web3Templates](https://web3templates.com)
 
 ## Live Demo
 
-### [JMBFloors Live Demo](https://astroship-pro.web3templates.com/)
+### [Astroship Pro Live Demo](https://astroship-pro.web3templates.com/)
 
-### [Buy JMBFloors Template](https://web3templates.com/templates/astroship-pro-astro-saas-website-template)
+### [Buy Astroship Pro Template](https://web3templates.com/templates/astroship-pro-astro-saas-website-template)
 
 #### [Get Free Version](https://web3templates.com/templates/astroship-starter-website-template-for-astro)
 
